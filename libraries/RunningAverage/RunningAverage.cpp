@@ -184,4 +184,15 @@ void RunningAverage::fillValue(const float value, const uint8_t number)
     addValue(value);
   }
 }
+
+// add the buffer is full function! 
+bool RunningAverage::bufferIsFull() const
+{
+    if (_cnt == _size) {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 // END OF FILE
